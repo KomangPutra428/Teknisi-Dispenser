@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tvip.teknisi_dispenser">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission
+        android:name="android.permission.LOCAL_MAC_ADDRESS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_NETWORK_USAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.intent.action.BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission
+        android:name="android.permission.UPDATE_DEVICE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.CLEAR_APP_CACHE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.DELETE_CACHE_FILES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.MANAGE_ACCESSIBILITY"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo_verifikasi"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/logo_verifikasi"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Teknisi_Dispenser"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".menu_edit.edit_ceklis_dispenser"
+            android:exported="false" />
+        <activity
+            android:name=".menu_edit.edit_verifikasi_dispenser"
+            android:exported="false" />
+        <activity
+            android:name=".menu_edit.edit_verifikasi_galon"
+            android:exported="false" />
+        <activity
+            android:name=".menu_verifikasi_dispenser.footer_detail_kunjungan_dispenser_verifikasi"
+            android:exported="false" />
+        <activity
+            android:name=".menu_verifikasi_dispenser.detail_kunjungan_dispenser_verifikasi"
+            android:exported="false" />
+        <activity
+            android:name=".menu_verifikasi_dispenser.history_verifikasi_dispenser"
+            android:exported="false" />
+        <activity
+            android:name=".menu_detail_kunjungan.footer_detail_kunjungan_dispenser"
+            android:exported="false" />
+        <activity
+            android:name=".menu_detail_kunjungan.detail_kunjungan_dispenser"
+            android:exported="false" />
+        <activity
+            android:name=".menu_form_kunjungan.ceklis_dispenser"
+            android:exported="false" />
+        <activity
+            android:name=".menu_form_kunjungan.verifikasi_dispenser"
+            android:exported="false" />
+        <activity
+            android:name=".menu_form_kunjungan.fisik_dispenser"
+            android:exported="false" />
+        <activity
+            android:name=".menu_form_kunjungan.pilih_id_dispenser"
+            android:exported="false" />
+        <activity
+            android:name=".menu_utama.biodata"
+            android:exported="false" />
+        <activity
+            android:name=".menu_detail_kunjungan.PdfReviewGalon"
+            android:exported="false" />
+        <activity
+            android:name=".menu_detail_kunjungan.detail_kunjungan_galon"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".menu_history_kunjungan.history_kunjungan"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".menu_form_kunjungan.verifikasi_galon"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".menu_form_kunjungan.form_kunjungan"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".menu_login.login"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".menu_utama.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".splash.splash"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Teknisi_Dispenser">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

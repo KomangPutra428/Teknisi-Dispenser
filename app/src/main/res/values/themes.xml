@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Teknisi_Dispenser" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#0F4C81</item>
+        <item name="colorPrimaryDark">#0F4C81</item>
+        <item name="colorAccent">#0F4C81</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="Theme.Teknisi_Dispenser" parent="Base.Theme.Teknisi_Dispenser" />
+</resources>

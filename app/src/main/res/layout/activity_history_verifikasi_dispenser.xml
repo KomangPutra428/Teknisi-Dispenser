@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_verifikasi_dispenser.history_verifikasi_dispenser">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        app:titleTextColor="#212121"
+        android:layout_height="56dp"
+        app:title="History Kunjungan"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary">
+
+        <!-- Add the ImageButton as a direct child of the MaterialToolbar -->
+        <ImageButton
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/filtering_data"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp" /> <!-- Margin to the right -->
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:id="@+id/menu_layout"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/detail_layout"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar.Bridge"
+                app:cardCornerRadius="8dp"
+                android:elevation="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginEnd="0dp"
+                                android:layout_marginBottom="0dp"
+                                android:enabled="false"
+                                android:text="Dispenser"
+                                android:textSize="12sp"
+                                app:chipCornerRadius="5dp"
+                                app:chipMinHeight="20dp"
+                                app:chipMinTouchTargetSize="25dp"
+                                app:chipStrokeColor="#AFC3D5"
+                                app:chipBackgroundColor="#EDF7FF"
+                                android:textColor="#0F4C81"
+                                app:chipStrokeWidth="2dp"
+                                app:singleLine="false" />
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/id_toko"
+                            android:layout_marginTop="16dp"
+                            android:textColor="#000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:text="SO Toko"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/nama_toko"
+                            android:textColor="#000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:text="Alamat Toko"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/summary"
+                android:layout_below="@+id/detail_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Tanggal Kunjungan"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="#0A0A0A"
+                android:textSize="16sp"/>
+
+
+            <ListView
+                android:id="@+id/list_dispenser_verifikasi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/summary"
+                android:divider="@null"
+                android:layout_marginTop="16dp"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

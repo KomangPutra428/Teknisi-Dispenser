@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_form_kunjungan.verifikasi_galon">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            app:titleTextColor="#212121"
+            android:layout_height="56dp"
+            app:title="Verifikasi Gallon Pinjaman"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/verifikasi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearbutton"
+        android:layout_below="@+id/toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pemakaian Air"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="#404040"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/pemakaiangroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/aqua_pemakaian"
+                    android:text="AQUA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0" />
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/vit_pemakaian"
+                    android:text="VIT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallon Pinjam"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="#404040"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/galonpinjam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:text="ADA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0" />
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:text="TIDAK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/pinjamangalon_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kondisi Gallon"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#404040"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_pinjam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jumlah Gallon Pinjam"
+                        android:layout_marginTop="16dp"
+                        android:textStyle="bold"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textColor="#404040"
+                        android:textSize="12sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        app:boxCornerRadiusBottomEnd="4dp"
+                        app:boxCornerRadiusBottomStart="4dp"
+                        app:boxCornerRadiusTopEnd="4dp"
+                        app:boxCornerRadiusTopStart="4dp"
+                        app:boxStrokeColor="#0F4C81">
+                        <EditText
+                            android:id="@+id/qtypinjam"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:inputType="number"
+                            android:paddingLeft="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:hint="Masukan Qty"
+                            android:singleLine="true"
+                            android:textSize="16dp"
+                            tools:layout_editor_absoluteX="41dp"
+                            tools:layout_editor_absoluteY="442dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kondisi Fisik Gallon Baik (Qty)"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#404040"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    app:boxCornerRadiusBottomEnd="4dp"
+                    app:boxCornerRadiusBottomStart="4dp"
+                    app:boxCornerRadiusTopEnd="4dp"
+                    app:boxCornerRadiusTopStart="4dp"
+                    app:boxStrokeColor="#0F4C81">
+                    <EditText
+                        android:id="@+id/qtybaik"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="Masukan Qty"
+                        android:singleLine="true"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteX="41dp"
+                        tools:layout_editor_absoluteY="442dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kondisi Fisik Gallon Rusak (Qty)"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#404040"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    app:boxCornerRadiusBottomEnd="4dp"
+                    app:boxCornerRadiusBottomStart="4dp"
+                    app:boxCornerRadiusTopEnd="4dp"
+                    app:boxCornerRadiusTopStart="4dp"
+                    app:boxStrokeColor="#0F4C81">
+                    <EditText
+                        android:id="@+id/qtyrusak"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="Masukan Qty"
+                        android:singleLine="true"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteX="41dp"
+                        tools:layout_editor_absoluteY="442dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gallon Tidak Ditemukan (Qty)"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#404040"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    app:boxCornerRadiusBottomEnd="4dp"
+                    app:boxCornerRadiusBottomStart="4dp"
+                    app:boxCornerRadiusTopEnd="4dp"
+                    app:boxCornerRadiusTopStart="4dp"
+                    app:boxStrokeColor="#0F4C81">
+                    <EditText
+                        android:id="@+id/qtynotfound"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="Masukan Qty"
+                        android:singleLine="true"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteX="41dp"
+                        tools:layout_editor_absoluteY="442dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah Fisik Gallon"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#9E9E9E"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    app:boxCornerRadiusBottomEnd="4dp"
+                    app:boxCornerRadiusBottomStart="4dp"
+                    app:boxCornerRadiusTopEnd="4dp"
+                    app:boxCornerRadiusTopStart="4dp"
+                    app:boxStrokeColor="#0F4C81"
+                    app:boxBackgroundColor="#EDEDED">
+                    <EditText
+                        android:id="@+id/qtytotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:textColor="#9E9E9E"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="Masukan Qty"
+                        android:singleLine="true"
+                        android:focusable="false"
+                        android:longClickable="false"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteX="41dp"
+                        tools:layout_editor_absoluteY="442dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Catatan"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="#404040"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                app:boxCornerRadiusBottomEnd="4dp"
+                app:boxCornerRadiusBottomStart="4dp"
+                app:boxCornerRadiusTopEnd="4dp"
+                app:boxCornerRadiusTopStart="4dp"
+                app:boxStrokeColor="#0F4C81">
+                <EditText
+                    android:id="@+id/catatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:hint="Catatan"
+                    android:gravity="top"
+                    android:singleLine="true"
+                    android:textSize="16dp"
+                    tools:layout_editor_absoluteX="41dp"
+                    tools:layout_editor_absoluteY="442dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto Stok Gallon"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="#404040"
+                android:textSize="12sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="10dp"
+                android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar.Bridge"
+                app:cardCornerRadius="8dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0"
+                android:elevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/fotostock"
+                        android:layout_width="match_parent"
+                        android:layout_height="172dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_below="@+id/fototextoutlet"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linear_gambar"
+                            android:layout_width="match_parent"
+                            android:layout_height="172dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/uploadgambar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_kamera" />
+
+                            <TextView
+                                android:id="@+id/textupload"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:gravity="center"
+                                android:text="Gambar"></TextView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_add_imagekhusus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"></LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/ambil_foto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:icon="@drawable/camera"
+                app:iconTint="#0A0A0A"
+                android:layout_marginTop="16dp"
+                app:iconGravity="textStart"
+                app:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                app:cornerRadius="4dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="2dp"
+                android:layout_centerHorizontal="true"
+                android:text="Ambil Foto"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="#0A0A0A"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanda Tangan"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="#404040"
+                android:textSize="12sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="10dp"
+                android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar.Bridge"
+                app:cardCornerRadius="8dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0"
+                android:elevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ttdstock"
+                        android:layout_width="match_parent"
+                        android:layout_height="172dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linear_ttd"
+                            android:layout_width="match_parent"
+                            android:layout_height="172dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ttdupload"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/touch_app" />
+
+                            <TextView
+                                android:id="@+id/textttd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:gravity="center"
+                                android:text="Tanda Tangan Pelanggan"></TextView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- Signature View -->
+                            <com.github.gcacace.signaturepad.views.SignaturePad
+                                android:id="@+id/signature_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:clickable="true"
+                                android:saveEnabled="false"
+                                android:focusable="true"
+                                android:background="@android:color/white"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/hapus_ttd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:icon="@drawable/trash"
+                app:iconTint="#0A0A0A"
+                android:layout_marginTop="16dp"
+                app:iconGravity="textStart"
+                app:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                app:cornerRadius="4dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="2dp"
+                android:layout_centerHorizontal="true"
+                android:text="Hapus"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="#0A0A0A"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Owner"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="#404040"
+                android:textSize="12sp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                app:boxCornerRadiusBottomEnd="4dp"
+                app:boxCornerRadiusBottomStart="4dp"
+                app:boxCornerRadiusTopEnd="4dp"
+                app:boxCornerRadiusTopStart="4dp"
+                app:boxStrokeColor="#0F4C81">
+                <EditText
+                    android:id="@+id/namapelanggan"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:hint="Nama"
+                    android:singleLine="true"
+                    android:textSize="16dp"
+                    tools:layout_editor_absoluteX="41dp"
+                    tools:layout_editor_absoluteY="442dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearbutton"
+        android:gravity="center"
+        android:visibility="visible"
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/batal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:strokeWidth="2dp"
+            app:strokeColor="#E0E0E0"
+            app:cornerRadius="4dp"
+            android:layout_marginLeft="16dp"
+            app:backgroundTint="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:text="Batal"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textColor="#0A0A0A"
+            android:textStyle="bold" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selesai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:layout_marginRight="16dp"
+            app:cornerRadius="4dp"
+            app:backgroundTint="#0F4C81"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:text="Selesai"
+            android:textSize="14dp"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/dispenser_footer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_detail_kunjungan.footer_detail_kunjungan_dispenser">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            app:titleTextColor="#212121"
+            android:layout_height="56dp"
+            app:title="Detail Kunjungan"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/tipetoko"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_above="@+id/linearbutton"
+        android:layout_below="@+id/toolbar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.card.MaterialCardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="16dp"
+                android:backgroundTint="#ffffff"
+                app:strokeColor="#E0E0E0"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Detail Dispenser"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:textStyle="bold"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textColor="#0A0A0A"
+                        android:layout_marginBottom="16dp"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+
+                    <RelativeLayout
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="No Seri Dispenser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/no_seri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:enabled="false"
+                            android:text="Dispenser"
+                            android:textSize="12sp"
+                            app:chipCornerRadius="5dp"
+                            app:chipMinHeight="20dp"
+                            app:chipMinTouchTargetSize="25dp"
+                            app:chipStrokeColor="#AFC3D5"
+                            app:chipBackgroundColor="#EDF7FF"
+                            android:textColor="#0F4C81"
+                            app:chipStrokeWidth="2dp"
+                            app:singleLine="false" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/air_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Pemakaian Air"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <TextView
+                            android:id="@+id/air"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Fisik Dispenser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <TextView
+                            android:id="@+id/fisik_dispenser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Lokasi Dispenser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <TextView
+                            android:id="@+id/lokasi"
+                            android:gravity="end"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Tipe Dispenser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <TextView
+                            android:id="@+id/tipe_dispenser"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/status_bayar"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Status Dispenser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <TextView
+                            android:id="@+id/status_dispenser_sewa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/seri_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Foto No Seri Dispenser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="#9E9E9E"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/foto_seri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            app:strokeWidth="2dp"
+                            app:strokeColor="#E0E0E0"
+                            app:cornerRadius="4dp"
+                            app:backgroundTint="#FFFFFF"
+                            android:scaleType="fitXY"
+                            android:text="Lihat"
+                            android:textSize="16sp"
+                            android:textAllCaps="false"
+                            android:textColor="#0A0A0A"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/depan_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Foto Tampak Depan Dispenser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="#9E9E9E"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/foto_depan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            app:strokeWidth="2dp"
+                            app:strokeColor="#E0E0E0"
+                            app:cornerRadius="4dp"
+                            app:backgroundTint="#FFFFFF"
+                            android:scaleType="fitXY"
+                            android:text="Lihat"
+                            android:textSize="16sp"
+                            android:textAllCaps="false"
+                            android:textColor="#0A0A0A"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/info_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Info Dispenser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="#9E9E9E"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/info_dispenser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            app:strokeWidth="2dp"
+                            app:strokeColor="#E0E0E0"
+                            app:cornerRadius="4dp"
+                            app:backgroundTint="#FFFFFF"
+                            android:scaleType="fitXY"
+                            android:text="Lihat"
+                            android:textSize="16sp"
+                            android:textAllCaps="false"
+                            android:textColor="#0A0A0A"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:padding="16dp"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Total Verifikasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <TextView
+                            android:id="@+id/qtyverifikasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:padding="16dp"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Total Maintenance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <TextView
+                            android:id="@+id/qtymaintenance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:padding="16dp"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Total Perbaikan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <TextView
+                            android:id="@+id/qtyperbaikan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/catatan_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Catatan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <TextView
+                            android:id="@+id/catatan"
+                            android:layout_width="150dp"
+                            android:gravity="end"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/fisik_layout"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="16dp"
+                android:backgroundTint="#ffffff"
+                app:strokeColor="#E0E0E0"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fisik Dispenser"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:textStyle="bold"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textColor="#0A0A0A"
+                        android:layout_marginBottom="16dp"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <RelativeLayout
+                        android:id="@+id/luar_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Penampilan Luar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:id="@+id/status_luar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YA/TIDAK"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="#0A0A0A"
+                                android:textSize="10sp" />
+                            <ImageView
+                                android:id="@+id/dropdown_luar"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_down"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catatan_luar_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#757575"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/catatan_luar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#0A0A0A"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <RelativeLayout
+                        android:id="@+id/atas_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Cover Atas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:id="@+id/status_atas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YA/TIDAK"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="#0A0A0A"
+                                android:textSize="10sp" />
+                            <ImageView
+                                android:id="@+id/dropdown_atas"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_down"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catatan_atas_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#757575"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/catatan_atas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#0A0A0A"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <RelativeLayout
+                        android:id="@+id/panas_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Kran Panas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:id="@+id/status_panas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YA/TIDAK"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="#0A0A0A"
+                                android:textSize="10sp" />
+                            <ImageView
+                                android:id="@+id/dropdown_panas"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_down"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catatan_panas_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#757575"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/catatan_panas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#0A0A0A"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <RelativeLayout
+                        android:id="@+id/dingin_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Kran Dingin/Netral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:id="@+id/status_dingin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YA/TIDAK"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="#0A0A0A"
+                                android:textSize="10sp" />
+                            <ImageView
+                                android:id="@+id/dropdown_dingin"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_down"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catatan_dingin_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#757575"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/catatan_dingin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#0A0A0A"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <RelativeLayout
+                        android:id="@+id/mesin_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Mesin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:id="@+id/status_mesin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YA/TIDAK"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="#0A0A0A"
+                                android:textSize="10sp" />
+                            <ImageView
+                                android:id="@+id/dropdown_mesin"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_down"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catatan_mesin_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#757575"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/catatan_mesin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#0A0A0A"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <RelativeLayout
+                        android:id="@+id/arde_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Stecker Arde"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:id="@+id/status_arde"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YA/TIDAK"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="#0A0A0A"
+                                android:textSize="10sp" />
+                            <ImageView
+                                android:id="@+id/dropdown_arde"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_down"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catatan_arde_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#757575"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/catatan_arde"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#0A0A0A"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <RelativeLayout
+                        android:id="@+id/reseptor_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Reseptor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:id="@+id/status_reseptor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YA/TIDAK"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="#0A0A0A"
+                                android:textSize="10sp" />
+                            <ImageView
+                                android:id="@+id/dropdown_reseptor"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_down"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catatan_reseptor_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#757575"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/catatan_reseptor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#0A0A0A"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <RelativeLayout
+                        android:id="@+id/lampu_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Lampu Switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:id="@+id/status_lampu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YA/TIDAK"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="#0A0A0A"
+                                android:textSize="10sp" />
+                            <ImageView
+                                android:id="@+id/dropdown_lampu"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_down"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catatan_lampu_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#757575"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/catatan_lampu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#0A0A0A"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <RelativeLayout
+                        android:id="@+id/kunjungan_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Hasil Kunjungan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:id="@+id/status_kunjungan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YA/TIDAK"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="#0A0A0A"
+                                android:textSize="10sp" />
+                            <ImageView
+                                android:id="@+id/dropdown_kunjungan"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_down"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catatan_kunjungan_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#757575"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/catatan_kunjungan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#0A0A0A"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <RelativeLayout
+                        android:id="@+id/keterangan_layout"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Keterangan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9E9E9E"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:id="@+id/status_keterangan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YA/TIDAK"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="#0A0A0A"
+                                android:textSize="10sp" />
+                            <ImageView
+                                android:id="@+id/dropdown_keterangan"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_down"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catatan_keterangan_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#757575"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/catatan_keterangan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#0A0A0A"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearbutton"
+        android:gravity="center"
+        android:visibility="visible"
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:strokeWidth="2dp"
+            app:strokeColor="#E0E0E0"
+            app:cornerRadius="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:backgroundTint="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:text="Kembali"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textColor="#0A0A0A"
+            android:textStyle="bold" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/print"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:layout_marginRight="16dp"
+            app:cornerRadius="4dp"
+            app:backgroundTint="#0F4C81"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:text="Print PDF"
+            android:textSize="14dp"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>
